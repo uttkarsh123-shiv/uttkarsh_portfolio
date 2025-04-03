@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Italiana&family=Klee+One&family=Londrina+Solid:wght@100;300;400;900&family=Moon+Dance&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Italiana&family=Klee+One&family=Moon+Dance&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');.moon-dance-regular {
+  font-family: "Moon Dance", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@property --hue1 {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@property --hue2 {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+body {
+  font-family: "Geist", sans-serif;
+
+  background-image: linear-gradient(
+      in oklch longer hue to right,
+      oklch(0.93 0.08 var(--hue1) / 10%),
+      oklch(0.93 0.08 var(--hue2) / 10%)
+    ),
+    linear-gradient(
+      in oklch longer hue to bottom,
+      oklch(0.93 0.08 var(--hue1) / 10%),
+      oklch(0.93 0.08 var(--hue2) / 10%)
+    );
+
+  background-size: 100% 100%;
+  /* color: white; */
+
+  animation-name: anim_bg;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes anim_bg {
+  0% {
+    --hue1: 0deg;
+    --hue2: 300deg;
+  }
+
+  100% {
+    --hue1: 360deg;
+    --hue2: 660deg;
+  }
+}
+/* .instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .instrument-serif-regular-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+} */
+
+/* .comic-neue-light {
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+  font-style: normal;
+} */
+
+/* .comic-neue-regular {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+} */
+/* 
+.comic-neue-bold {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+} */
+
+/* .comic-neue-light-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 300;
+  font-style: italic;
+} */
+
+/* .comic-neue-regular-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: italic;
+} */
+
+/* .comic-neue-bold-italic {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: italic;
+} */
+
+
+/* .cormorant-garamond-<uniquifier> {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* .roboto{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+:root{
+  --primary-color:"#fcfaf8";
+  --secondary-color:"#00000";
+  --tertiary-color:"#goldenrod";
+  --big-size:"450px";
+  --secondary-size:"65.66px";
+  --small-size:"25.06px";
+}
+h1{
+  font-family: "Moon Dance", cursive;
+  
+}
+
+.about{
+  font-weight: 100;
+  font-family: "Geist", sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  line-height: 60px;
+  /* text-transform: uppercase; */
+  /* opacity: 0.7; */
+}
+
+
+.headingpara{
+  font-family: "Geist", sans-serif;
+  text-transform: uppercase;
+}
+button:not(:nth-child(3)) {
+  position: relative;
+  overflow: hidden;
+  z-index: 1; 
+}
+
+ button:not(:nth-child(3)) span {
+  position: relative;
+  z-index: 2; 
+}
+
+ button:not(:nth-child(3))::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  bottom: 0;
+  left: 0;
+  top: 100%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background:rgb(234, 255, 0);
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+}
+
+button:not(:nth-child(3)):hover::after {
+  top: -60%;
+}
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+button:not(:nth-child(3)) svg {
+  animation: floatAnimation 1s ease-in-out infinite;
+}
+
+.footer h1{
+  font-family: "Comic Neue", cursive;
+  /* font-weight: 700;  */
+}
+
+.navlink li {
+  position: relative;
+  cursor: pointer;
+}
+
+li:hover:after {
+  width: 100%;
+}
+
+li:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #d3d965,
+    /* #6A00FF, */
+    #61cc9c,
+    /* #737373, */
+    #7abbbb,
+    #be80b8
+  );
+  
+  top: 100%;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
