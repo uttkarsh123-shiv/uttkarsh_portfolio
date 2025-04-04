@@ -1,47 +1,47 @@
 // import React from 'react'
-import { useState,useRef, useEffect} from 'react'
-import gsap from "gsap";
+import { useState,useEffect} from 'react'
+// import gsap from "gsap";
 const Fourth = () => {
-    const buttonRef = useRef(null);
+    // const buttonRef = useRef(null);
 
-    const handleMouseMove = (e) => {
-      const box = e.target;
-      const x = e.nativeEvent.offsetX;
-      const y = e.nativeEvent.offsetY;
+    // const handleMouseMove = (e) => {
+    //   const box = e.target;
+    //   const x = e.nativeEvent.offsetX;
+    //   const y = e.nativeEvent.offsetY;
 
-      const boxWidth = box.clientWidth;
-      const boxHeight = box.clientHeight;
+    //   const boxWidth = box.clientWidth;
+    //   const boxHeight = box.clientHeight;
   
-      const maxMove = 50;
-      const newX = Math.max(-maxMove, Math.min(maxMove, x - boxWidth / 2));
-      const newY = Math.max(-maxMove, Math.min(maxMove, y - boxHeight / 2));
+    //   const maxMove = 50;
+    //   const newX = Math.max(-maxMove, Math.min(maxMove, x - boxWidth / 2));
+    //   const newY = Math.max(-maxMove, Math.min(maxMove, y - boxHeight / 2));
   
-      gsap.to(buttonRef.current, {
-        x: newX,
-        y: newY,
-        duration: 0.2,
-        ease: "power2.out",
-      });
-    };
+    //   gsap.to(buttonRef.current, {
+    //     x: newX,
+    //     y: newY,
+    //     duration: 0.2,
+    //     ease: "power2.out",
+    //   });
+    // };
   
-    const handleMouseLeave = () => {
-      gsap.to(buttonRef.current, {
-        x: 0,
-        y: 0,
-        duration: 0.6,
-        ease: "elastic.out(1, 0.4)",
-      });
-    };
+    // const handleMouseLeave = () => {
+    //   gsap.to(buttonRef.current, {
+    //     x: 0,
+    //     y: 0,
+    //     duration: 0.6,
+    //     ease: "elastic.out(1, 0.4)",
+    //   });
+    // };
     
-    const [hover, setHover] = useState(false);
+    // const [hover, setHover] = useState(false);
   
-    const MouseEnter = () => {
-      setHover(true);
-    };
+    // const MouseEnter = () => {
+    //   setHover(true);
+    // };
   
-    const MouseLeave = () => {
-      setHover(false);
-    };
+    // const MouseLeave = () => {
+    //   setHover(false);
+    // };
   
   
   
@@ -61,7 +61,7 @@ const Fourth = () => {
       <div className="heading inline-block  mt-20 ml-[20vh]">
           <h1 className="text-8xl">let&lsquo;s connect</h1>
         </div>
-        <button className='special-btn inline '
+        {/* <button className='special-btn inline '
           ref={buttonRef}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
@@ -72,7 +72,7 @@ const Fourth = () => {
             onMouseLeave={MouseLeave}
             className={hover ? "hover" : ""} // Add a class when hovered
           ></span>
-        </button>
+        </button> */}
     <div className="line w-[85%] bg-gray-500 h-[1px]  ml-[10vh]"></div>
     <div className="button-grp ml-[20vh] mt-[5vh] gap-10 flex ">
       <button className="p-4 pl-8 pr-8 border-1 rounded-full border-dotted border-gray-500 z-3 cursor-pointer"><span className='z-3'>  <a href="mailto:uttkarshsingh450@gmail.com">uttkarshsingh450@gmail.com</a></span></button>
