@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Dynalight&family=Instrument+Serif:ital@0;1&family=Londrina+Solid:wght@100;300;400;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  overflow-x: hidden;
+}
+
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.noise::before{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: '';
+  opacity: 0.04;
+  z-index:1000;
+  pointer-events: none;
+  /* opacity: 0.1; */
+  background: url("https://media-hosting.imagekit.io/b8a3f0a36663497e/noise.gif?Expires=1838349674&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=JxNylJtVwQZkACH8z5EwH9bVezrwK9QqYyxFHPaNrXbQZZ2TpxXxJdDYt6zjNdesaLWzeCTXi6dLx9Lc2Q8OXsjgo47PfOpWhO2z-4LcvwmSWed8L9krrjnn4gNhIPOHGV3m7TkuDzRuyU9m1FLSE10fbjFl1y6HLUYgbxB7NHUsOAUqL66Q21k5fh~w0H22mcymjks~M81mNDv4cSclYeOSFaHo8DyceXVyAdvQ6StchDVqakuWFaga~zGqxOoZL1cRpz5b8VHs7U3dEUwdRVYcW9Mfcz98cE370i8Tf~dZcEJh0hp~G7oa~D0PrIsPIKLrNbI8Omy6ZRSYWHL9LA__");
+}
+
+.dynalight-regular {
+  font-family: "Dynalight", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.heading{
+  letter-spacing: -5px;
+}
+
+
+.navlink li {
+  position: relative;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+li:hover:after {
+  width: 100%;
+}
+
+li:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #d3d965,
+    #61cc9c,
+    #7abbbb,
+    #be80b8
+  );
+  
+  top: 100%;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.about-content{
+font-family: roboto;
+}
+
+.about-heading {
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.skill-heading{
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  span{
+    font-family: "Roboto", sans-serif;
+font-weight:300;
+  }
+}
+a{
+  position: relative;
+}
+
+a::after{
+  content:"";
+  position: absolute;
+  top:100%;
+  left:0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease-in-out;
+}
+a:hover::after{
+  width:96%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 40vw;
+  height: 200vh;
+}
+
+.grid-item {
+  border: 2px solid #eee;
+  position: relative;
+  padding: 20px;
+}
+
+.number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: #888;
+  font-family: monospace;
+}
+
+.title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+.grid-item.empty {
+  border: none;
+  background: transparent;
+}
+
+img{
+  scale: 1.6;
+}
+span{
+  font-family: monospace;
+}
+
+
+.connect h1:hover{
+background: hsla(0, 0%, 0%, 0.075);
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}

@@ -1,24 +1,34 @@
 const About = () => {
   return (
-    <div className="w-full mt-80 pb-80">
+    <div className="w-[100vw] h-[200vh] flex justify-center items-center">
 
-    <div className="w-full flex justify-between h-[50vh] p-[2%]">
-      <p className="text-0.8xl ml-2 mt-4">ABOUT ME</p>
-      <p className="about text-[50px] w-[70vw] text-[black]">I'm a passionate Computer Science and Engineering student at MAIT College, with a strong interest in designing      development. I enjoy transforming        ideas into  <span className="italic">functional</span> + delightful solutions and continuously strive to enhance my      skills.</p>
+      <div className="h-[60vh] w-[100vw]  flex">
+        <div className="w-[15vw] ml-80 mt-20 ">
+<img src="https://media-hosting.imagekit.io/ffe1026bca644b40/Picture8.png?Expires=1839575316&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ZJknAbPsYJVzr1sfgdGy1AEwgPqG-ikYuzmrrUt1vqKeFWDRCXOdAZd8Hk7aM2S-bTChLhr8yioAAmPLpWhEVVjGbsEncfMC4GHjsrMHr8hWYd1hdCTfthAPZ0zIE10KLIZV9mAlFT0yK1LeZocM42cQKD01MruIpfuVpME-z5IrTqM6g~xaUho4vzPdOJD-cmZRvAn0yvxMSF5h6OXqMGMHCMvCtPSPt8uLeNCmP7RxJnqyyVvzVCa7x1063eG0b3b7fGLjPM9fAawyqxFCcagedmC0M0-wR~9yjIomSM0Q3aByMr7ZkNXIRa26RzxzPZw~79ro3XruvUvnrTyBPg__" alt="" />
+        </div>
+        <div className="w-[80vw] h-[30vh] ml-20 mt-20">
+                    <p className="about-heading text-xl  text-[#1d1d1d]">About Me</p>
+
+          <p className="about-content mt-10 text-[20px] w-[26vw] text-[#636363] ">
+            I'm a passionate Computer Science and Engineering student at MAIT
+            College, with a strong interest in designing development. I enjoy
+            transforming ideas into <span className="italic">functional </span>+
+            delightful solutions and continuously strive to enhance my skills.
+          </p>
+
+    <div className="cv flex gap-5 items-center mt-20">
+      <p className="font-semibold">Download CV</p>
+      <div className="border border-dotted p-2 rounded-full cursor-pointer" onClick={()=> window.open("https://drive.google.com/file/d/1hBX85vX9Xa61N-9dNdOrrhXUDfwUP5p2/view")}>
+            <span>
+            <svg viewBox="0 0 16 16" preserveAspectRatio="none" width="16" height="16"><defs><svg viewBox="0 0 16 16" id="svg-234516503_244"><path d="M8 11.7 4.3 8V6.3l3 3V1h1.4v8.3l3-3V8L8 11.7Z" data-name="Layer_1"></path><path d="M2.4 13.9H1.2V11l1.2 1v1.9zm11.2 0h1.2V11l-1.2 1v1.9z"></path><path d="M14.8 13.7v1.2H1.2v-1.2z"></path></svg></defs><g><path d="M8 11.7 4.3 8V6.3l3 3V1h1.4v8.3l3-3V8L8 11.7Z" data-name="Layer_1"></path><path d="M2.4 13.9H1.2V11l1.2 1v1.9zm11.2 0h1.2V11l-1.2 1v1.9z"></path><path d="M14.8 13.7v1.2H1.2v-1.2z"></path></g></svg>
+            </span>
+          </div>
     </div>
-    <button className="ml-100 mt-30 border p-4 pl-10 pr-10 rounded-full  z-3 cursor-pointer"><span className='z-3 flex items-center justify-between'>MORE ABOUT ME <svg className="icon:s"  width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.75">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" strokeWidth="0.75px"></path>
-                        <path d="M17 7l-10 10" stroke="#101010" fill="none" strokeWidth="0.75px"></path>
-                        <path d="M8 7l9 0l0 9" stroke="#101010" fill="none" strokeWidth="0.75px"></path>
-                    </svg></span></button>
+       
+        </div>
+      </div>
+    </div>
+  );
+};
 
-
-    {/* <div className="button-grp ml-[20vh] mt-[5vh] gap-10 flex ">
-      <button className="p-4 pl-8 pr-8 border-1 rounded-full border-dotted border-gray-500 z-3 cursor-pointer"><span className='z-3'>  <a href="mailto:uttkarshsingh450@gmail.com">uttkarshsingh450@gmail.com</a></span></button>
-      <button className="p-4 pl-8 pr-8 border-1 rounded-full border-dotted border-gray-500"><span className='z-3'>+91-9582189958</span></button>
-    </div> */}
-</div>
-  )
-}
-
-export default About
+export default About;
