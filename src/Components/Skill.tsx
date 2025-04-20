@@ -10,7 +10,10 @@ const Skill = () => {
       <div className="grid-container mt-50">
   <div className="grid-item">
     <span className="number">01</span>
-    <span className="title">UI Design</span>
+    <div className="title ">
+      <h1>UI DESIGN</h1>
+      {/* <p>FIGMA</p> */}
+    </div>
   </div>
   <div className="grid-item empty">
   </div>

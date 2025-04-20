@@ -15,7 +15,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="contact w-[100vw] h-[125vh] overflow-hidden">
+    <div id='contact' className="contact w-[100vw] h-[125vh] overflow-hidden">
         <h1 className="text-[110px] W-[90VW] boldonse-regular leading-35  text-center">GET ON <br/> BOARD</h1>
         <div className="connect relative top-30 flex flex-col items-center justify-center ">
           <h1  onClick={() => window.location.href = "mailto:uttkarshsingh450@gmail.com"} className="inline-block Instrument-Serif font-semibold cursor-pointer text-[82px] p-25 pl-35 pr-35 border rounded-full border-dotted hover:text-white hover:bg-black">UTTKARSHSINGH450@GMAIL.COM</h1>

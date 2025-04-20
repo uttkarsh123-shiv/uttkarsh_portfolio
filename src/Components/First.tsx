@@ -1,8 +1,8 @@
 const First = () => {
   return (
     <>
-      <div className="h-[90vh] w-[100vw] flex flex-col justify-center items-center mx-auto">
-        <h1 className="text-[150px] font-semibold boldonse-regular text-[#000000]">
+      <div className="first bg-amber-50 h-[90vh] w-[100vw] flex flex-col justify-center items-center">
+        <h1 className="text-[150px]  sm:text-[100px] md:text-[150px] font-semibold boldonse-regular text-[#000000]">
           UTTKARSH,
         </h1>
         <h1 className="dynalight-regular text-[150px]  text-[#0e0e0e] relative top-[-10vh] left-70">
