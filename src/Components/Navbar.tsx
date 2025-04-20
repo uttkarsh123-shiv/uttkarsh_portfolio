@@ -1,40 +1,56 @@
+import { useEffect, useState } from "react";
 const Navbar = () => {
-  const list: string[] = ["@codebyuttkarsh", "PROJECTS", "ABOUT", "RESUME", "CONNECT"];
-  const numbers: number[] = [1, 2, 3, 4, 5];
-  const resumeLink = "https://drive.google.com/file/d/1hBX85vX9Xa61N-9dNdOrrhXUDfwUP5p2/view";
+  const list: string[] = ["@codebyuttkarsh", "HOME", "ABOUT","SKILL", "CONTACT"];
+  const numbers = Array.from({ length: list.length - 1 }, (_, i) => i + 1);
 
+  const resumeLink = "https://drive.google.com/file/d/1hBX85vX9Xa61N-9dNdOrrhXUDfwUP5p2/view";
+  const [activeSection, setActiveSection] = useState("HOME");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionIds = ["home", "about", "skill", "contact"];
+      const offsets = sectionIds.map(id => {
+        const el = document.getElementById(id);
+        return {
+          id: id.toUpperCase(),
+          top: el?.offsetTop ?? 0
+        };
+      });
+
+      const scrollY = window.scrollY;
+      const current = offsets.findLast(sec => scrollY >= sec.top - 100);
+      if (current) setActiveSection(current.id);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <div className="w-full h-[10vh] flex justify-between items-center px-[3%] border-b bg-[#272626] ">
+    <div className="w-full h-[15vh] flex gap-180 items-center px-[3%] bg-[#272626] ">
       <div>
-        <img width={13} src="https://media-hosting.imagekit.io/790c56ffad224313/portfolio-logo.png?Expires=1839078379&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TLEaeQgkjy9miNZseXND6lQgov9ffyEIbFbXMIR-MeTQN-Rh-HxkzkanXhVpE9Y9sPKiOEZOLRlrnELiLU9hVB9VbiXX4OPiVHrhaMfq7THqHOhjVhylqPSUGwntniEKaHAiwnJ29Xx1c2KKQpeCDYiBd471IklPFjicE2rTtPAgK~YeGgiuPP3HnqNBH~MzlfEVPiA1wq7x1ve8nxq49FbWd4vDC1ph~hkpdX6ojKRXI3OawPUE4arsNOcbRUrOl2ySpApJmv226MqZOpMDBLZM8Odbd6v1e57IYelUtKBINAiTANM8VmHTt9NWNrCifRBihTeBRAILAmAYMgLzeg__" alt="" />
+        <img width={15} src="https://media-hosting.imagekit.io/10bf9cb65e1848f0/LOGO.png?Expires=1839644942&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=P6E5Nv65KC7gxAuFiqovJGpUCCse3vqRnsQqLmBmL1vGmmDV041QDWlzDxPZ0Kh6zCO0NOz7fxwMMQKXt7uU~mLd5-0MX~rbSnRG~LmqVL3Gbq91oG1ErqmDWCVCOxBajQ5OitG5cUbwiVdp~vSrGkbKcbSqXg81lDHJAZ9WUAujiZxJO1sAzBYCv9sk2D33MhmDRPtTiiyjHvItHWHX1sp6VcjbHXO7CEHcYlme~i~V7TZd1v0wFKNeMfEvCa2wsyRRp6CSlDN~4iQlK0HI~rlnNsGH5GhO-d7hoK6upiFDNBU~aML~pO~fDFt-bC9O2hKcZTJB8sS32iL8QJ6xjg__" alt="" />
       </div>
       <ul className="navlink flex justify-between items-center gap-20">
-        {list.slice(1, 4).map((item, index) => (
-          <li
-            key={index}
-            className={item === "RESUME" ? "cursor-pointer" : ""}
-            onClick={() => {
-              if (item === "RESUME") {
-                window.open(resumeLink, "_blank");
-              }
-            }}
-          >
-            <span className="text-gray-500 mr-1 font-mono">
-              {numbers[index].toString().padStart(2, "0")}
-            </span>
-            <span className="font-semibold">{item}</span>
-          </li>
-        ))}
-      </ul>
-
-      <p
-        className="cursor-pointer text-[13px] font-semibold"
-        onClick={() =>
-          (window.location.href = "mailto:uttkarshsingh450@gmail.com")
+  {list.slice(1, 5).map((item, index) => (
+    <li
+      key={index}
+      className="flex gap-1 items-center cursor-pointer"
+      onClick={() => {
+        if (item === "RESUME") {
+          window.open(resumeLink, "_blank");
+        } else {
+          const target = document.getElementById(item.toLowerCase());
+          if (target) target.scrollIntoView({ behavior: "smooth" });
         }
-      >
-        {list[4]}
-      </p>
+      }}
+    >
+      <span className="text-gray-500 font-mono">
+        {numbers[index].toString().padStart(2, "0")}
+      </span>
+      <span className="font-semibold">{item}</span>
+    </li>
+  ))}
+</ul>
     </div>
   );
 };

@@ -2,6 +2,7 @@
 
 body{
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 
@@ -15,12 +16,18 @@ body{
   width: 100vw;
   height: 100vh;
   content: '';
-  opacity: 0.04;
+  opacity: 0.0;
   z-index:1000;
   pointer-events: none;
   /* opacity: 0.1; */
   background: url("https://media-hosting.imagekit.io/b8a3f0a36663497e/noise.gif?Expires=1838349674&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=JxNylJtVwQZkACH8z5EwH9bVezrwK9QqYyxFHPaNrXbQZZ2TpxXxJdDYt6zjNdesaLWzeCTXi6dLx9Lc2Q8OXsjgo47PfOpWhO2z-4LcvwmSWed8L9krrjnn4gNhIPOHGV3m7TkuDzRuyU9m1FLSE10fbjFl1y6HLUYgbxB7NHUsOAUqL66Q21k5fh~w0H22mcymjks~M81mNDv4cSclYeOSFaHo8DyceXVyAdvQ6StchDVqakuWFaga~zGqxOoZL1cRpz5b8VHs7U3dEUwdRVYcW9Mfcz98cE370i8Tf~dZcEJh0hp~G7oa~D0PrIsPIKLrNbI8Omy6ZRSYWHL9LA__");
 }
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 .dynalight-regular {
   font-family: "Dynalight", cursive;
@@ -41,11 +48,11 @@ body{
   font-size: 13px;
 }
 
-li:hover:after {
+/* li:hover:after {
   width: 100%;
-}
+} */
 
-li:after {
+/* li:after {
   content: '';
   position: absolute;
   width: 0%;
@@ -61,7 +68,7 @@ li:after {
   top: 100%;
   left: 0;
   transition: width 0.3s ease-in-out;
-}
+} */
 
 .about-content{
 font-family: roboto;

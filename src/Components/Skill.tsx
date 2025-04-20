@@ -1,11 +1,9 @@
 const Skill = () => {
   return (
-    <div className="flex gap-100 h-[270vh]">
-    <div className="p-10 w-[30vw]">
-    <p className=" dynalight-regular text-5xl mt-2 font-semibold">
-        Skills <span className=" text-5xl roboto font-semibold">Set</span>
-      </p>
-      <p>
+    <div id="skill" className="flex gap-40 h-[270vh]">
+    <div className="p-10 w-[43vw]">
+    <h1 className="text-[90px] boldonse-regular leading-35 ">MY SKILLSET</h1>
+      <p className="text-[30px]">
       Over the course of my career, I’ve strived to develop a diverse set of core skills.
       </p>
     </div>

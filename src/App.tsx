@@ -13,7 +13,7 @@ function App() {
     <>
     <div className='noise'></div>
      <Navbar />
-     <First />
+     <First  />
      <About />
      <Skill />
      <Footer />
