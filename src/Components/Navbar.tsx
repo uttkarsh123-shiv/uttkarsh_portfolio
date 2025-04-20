@@ -26,7 +26,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="w-full h-[15vh] flex gap-180 items-center px-[3%] bg-[#272626] ">
+    <div className="w-full h-[15vh] flex gap-180 items-center px-[3%]  ">
       <div>
         <img width={15} src="https://media-hosting.imagekit.io/10bf9cb65e1848f0/LOGO.png?Expires=1839644942&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=P6E5Nv65KC7gxAuFiqovJGpUCCse3vqRnsQqLmBmL1vGmmDV041QDWlzDxPZ0Kh6zCO0NOz7fxwMMQKXt7uU~mLd5-0MX~rbSnRG~LmqVL3Gbq91oG1ErqmDWCVCOxBajQ5OitG5cUbwiVdp~vSrGkbKcbSqXg81lDHJAZ9WUAujiZxJO1sAzBYCv9sk2D33MhmDRPtTiiyjHvItHWHX1sp6VcjbHXO7CEHcYlme~i~V7TZd1v0wFKNeMfEvCa2wsyRRp6CSlDN~4iQlK0HI~rlnNsGH5GhO-d7hoK6upiFDNBU~aML~pO~fDFt-bC9O2hKcZTJB8sS32iL8QJ6xjg__" alt="" />
       </div>

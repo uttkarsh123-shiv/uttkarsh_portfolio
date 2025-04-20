@@ -3,7 +3,7 @@ const Skill = () => {
     <div id="skill" className="flex gap-40 h-[270vh]">
     <div className="p-10 w-[43vw]">
     <h1 className="text-[90px] boldonse-regular leading-35 ">MY SKILLSET</h1>
-      <p className="text-[30px]">
+      <p className="text-[30px] Instrument-Serif  text-[#636363]">
       Over the course of my career, I’ve strived to develop a diverse set of core skills.
       </p>
     </div>

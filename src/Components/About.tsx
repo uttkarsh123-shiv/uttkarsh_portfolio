@@ -14,10 +14,10 @@ const About = () => {
         <div className="w-[80vw] h-[100vh] ml-20 ">
         <h1 className="text-[70px] boldonse-regular leading-35 ">ABOUT ME</h1>
 
-          <p className="about-content mt-10 text-[30px] w-[46vw] text-[#636363] ">
+          <p className="Instrument-Serif mt-10 text-[30px] w-[46vw] text-[#636363] ">
             I'm a passionate Computer Science and Engineering student at MAIT
             College, with a strong interest in designing development. I enjoy
-            transforming ideas into <span className="italic">functional </span>+
+            transforming ideas into functional +
             delightful solutions and continuously strive to enhance my skills.
           </p>
 

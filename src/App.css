@@ -4,7 +4,11 @@ body{
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
+.Instrument-Serif {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .roboto {
   font-family: "Roboto", sans-serif;
@@ -48,30 +52,19 @@ body{
   font-size: 13px;
 }
 
-/* li:hover:after {
+li a:hover:after {
   width: 100%;
-} */
+}
 
-/* li:after {
+li a:after {
   content: '';
   position: absolute;
   width: 0%;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    #d3d965,
-    #61cc9c,
-    #7abbbb,
-    #be80b8
-  );
-  
+  height: 1px;
+  background: #000;
   top: 100%;
   left: 0;
   transition: width 0.3s ease-in-out;
-} */
-
-.about-content{
-font-family: roboto;
 }
 
 .about-heading {
@@ -107,11 +100,6 @@ a:hover::after{
   width:96%;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
-}
 
 .grid-container {
   display: grid;
@@ -156,10 +144,23 @@ span{
   font-family: monospace;
 }
 
-
-.connect h1:hover{
-background: hsla(0, 0%, 0%, 0.075);
-}
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }
+
+.arrow {
+  animation: animate 2s infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
